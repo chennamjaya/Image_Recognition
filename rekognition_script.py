@@ -1,7 +1,8 @@
 import boto3
+import sys
 
 # Initialize the Rekognition client
-rekognition = boto3.client('rekognition')
+rekognition = boto3.client('rekognition', region_name='us-east-1')
 
 # Function to detect labels in an image
 def detect_labels(bucket, photo):
